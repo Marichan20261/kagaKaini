@@ -12,6 +12,7 @@ CHANNEL_ID = int(os.getenv("DISCORD_CHANNEL_ID", "0"))
 
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="/", intents=intents)
+intents.message_content = True
 
 # スケジューラ初期化
 scheduler = TaskScheduler("tasks.json")
